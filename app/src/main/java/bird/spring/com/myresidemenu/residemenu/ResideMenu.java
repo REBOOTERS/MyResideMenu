@@ -203,6 +203,7 @@ public class ResideMenu extends FrameLayout implements OnClickListener {
 			return rightMenuItems;
 	}
 
+
 	/**
 	 * if you need to do something on the action of closing or opening menu, set
 	 * the listener here.

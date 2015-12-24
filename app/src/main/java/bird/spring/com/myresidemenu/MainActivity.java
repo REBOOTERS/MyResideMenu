@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         for (int i = 0; i < menuItems.length; i++) {
             ResideMenuItem menuItem = new ResideMenuItem(this, icons[i], menuItems[i]);
             menuItem.setOnClickListener(this);
+            //为了方便在Click方法中实现，这里手动添加一个id.
             menuItem.setId(i);
             resideMenu.addMenuItem(menuItem, ResideMenu.DIRECTION_LEFT);
 
