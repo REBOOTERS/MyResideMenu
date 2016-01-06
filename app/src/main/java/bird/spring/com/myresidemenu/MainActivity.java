@@ -73,12 +73,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //为了方便在Click方法中实现，这里手动添加一个id.
             menuItem.setId(i);
             resideMenu.addMenuItem(menuItem, ResideMenu.DIRECTION_LEFT);
-
         }
 
         info = new ResideMenuInfo(this, R.drawable.fsf, "魑魅魍魉", "32 级");
+        info.setId(+100);
         resideMenu.addMenuInfo(info);
-
         info.setOnClickListener(this);
 
 
@@ -114,6 +113,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case 6:
                 msg = menuItems[6];
+                break;
+            case 100:
+                msg="info";
                 break;
             default:
                 msg = "This is default";

@@ -11,59 +11,66 @@ import bird.spring.com.myresidemenu.R;
 
 public class ResideMenuInfo extends LinearLayout {
 
-	/** menu item icon */
-	private ImageView iv_icon;
-	/** menu item title */
-	private TextView tv_username;
+    /**
+     * menu item icon
+     */
+    private ImageView iv_icon;
+    /**
+     * menu item title
+     */
+    private TextView tv_username;
 
-	private TextView tv_dengji;
+    private TextView tv_dengji;
 
-	public ResideMenuInfo(Context context) {
-		super(context);
-		initViews(context);
-	}
+    private int Id;
 
-	public ResideMenuInfo(Context context, int icon, String title, String dengji) {
-		super(context);
-		initViews(context);
-		iv_icon.setImageResource(icon);
-		tv_username.setText(title);
-		tv_dengji.setText(dengji);
-	}
+    public ResideMenuInfo(Context context) {
+        super(context);
+        initViews(context);
+    }
 
-	private void initViews(Context context) {
-		LayoutInflater inflater = (LayoutInflater) context
-				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		inflater.inflate(R.layout.residemenu_info, this);
-		iv_icon = (ImageView) findViewById(R.id.image_icon);
-		tv_username = (TextView) findViewById(R.id.tv_username);
-		tv_dengji = (TextView) findViewById(R.id.tv_dengji);
-	}
+    public ResideMenuInfo(Context context, int icon, String title, String dengji) {
+        super(context);
+        initViews(context);
+        iv_icon.setImageResource(icon);
+        tv_username.setText(title);
+        tv_dengji.setText(dengji);
+    }
 
-	/**
-	 * set the icon color;
-	 * 
-	 * @param icon
-	 */
-	public void setIcon(int icon) {
-		iv_icon.setImageResource(icon);
-	}
+    private void initViews(Context context) {
+        LayoutInflater inflater = (LayoutInflater) context
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        inflater.inflate(R.layout.residemenu_info, this);
+        iv_icon = (ImageView) findViewById(R.id.image_icon);
+        tv_username = (TextView) findViewById(R.id.tv_username);
+        tv_dengji = (TextView) findViewById(R.id.tv_dengji);
+    }
 
-	/**
-	 * set the title with string;
-	 * 
-	 * @param title
-	 */
-	public void setTitle(String title) {
-		tv_username.setText(title);
-	}
+    /**
+     * set the icon color;
+     *
+     * @param icon
+     */
+    public void setIcon(int icon) {
+        iv_icon.setImageResource(icon);
+    }
 
-	/**
-	 * set the title with string;
-	 * 
-	 * @param dengji
-	 */
-	public void setDengJi(String dengji) {
-		tv_dengji.setText(dengji);
-	}
+    /**
+     * set the title with string;
+     *
+     * @param title
+     */
+    public void setTitle(String title) {
+        tv_username.setText(title);
+    }
+
+    /**
+     * set the title with string;
+     *
+     * @param dengji
+     */
+    public void setDengJi(String dengji) {
+        tv_dengji.setText(dengji);
+    }
+
 }
